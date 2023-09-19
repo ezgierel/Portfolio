@@ -1,0 +1,247 @@
+:root {
+    --backgroundColor: #F1F0EA;
+    --hoverColor: #737373;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+section {
+    transition: all 1s;
+}
+
+/* header */
+
+a,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: var(--hoverColor);
+}
+
+header {
+    /* align-self: center; */
+    margin: 20px 0;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu-icon {
+    display: none;
+}
+
+#title {
+    margin: 0;
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: 'Archivo Black', sans-serif;
+    user-select: none;
+}
+
+#menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    /* width: 14%; */
+    justify-content: space-between;
+}
+
+.menu-item {
+    width: 65px;
+    padding: 5px;
+    text-align: right;
+}
+
+.menu-link {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+.menu-link[download] {
+    font-weight: bold;
+}
+
+/* welcome content */
+
+#page-info,
+#hardle,
+#contact-page-info {
+    width: 90%;
+    margin-top: 300px;
+}
+
+#page-info h2,
+#contact-page-info h2 {
+    margin: 0;
+    font-size: 2.7rem;
+}
+
+h2 span:first-child {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+h2 span:last-child {
+    font-family: 'Archivo Black', sans-serif;
+}
+
+hr {
+    height: 3px;
+    background-color: black;
+}
+
+#page-info p,
+#contact-page-info p {
+    font-family: 'Anonymous Pro', monospace;
+    width: 40%;
+    margin-right: 10px;
+    margin-left: auto;
+    text-align: justify;
+}
+
+#contact-page-info p {
+    text-align: right;
+    font-weight: bold;
+}
+
+#contact-page-info p:last-child {
+    margin-top: 0;
+}
+
+#contact-page-info a {
+    font-weight: normal;
+}
+
+/* page content */
+
+#hardle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hardle h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#hardle p,
+a {
+    font-family: 'Anonymous Pro', monospace;
+}
+
+#hardle p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#hardle a {
+    text-decoration: underline;
+}
+
+#hardle iframe {
+    margin: 40px 0;
+    width: 80%;
+    height: 720px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* 720 */
+
+@media(max-width: 720px) {
+
+    * {
+        transition: all 1s;
+    }
+
+    #title {
+        font-size: 2.7rem;
+    }
+
+    header a {
+        font-size: 0.95rem;
+    }
+
+    .menu-item {
+        width: 56px;
+    }
+
+    #hardle iframe {
+        width: 92%;
+    }
+
+    #page-info p {
+        width: 50%;
+    }
+
+    #contact-page-info p {
+        width: 100%;
+    }
+
+    #page-info h2,
+    #contact-page-info h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* 540 */
+
+@media(max-width: 540px) {
+
+    #page-info,
+    #contact-page-info,
+    #hardle {
+        width: 95%;
+        margin-top: 200px;
+    }
+
+    /* hamburger menu */
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    #title {
+        width: 50%;
+    }
+
+    #menu-icon {
+        font-size: 2rem;
+        user-select: none;
+        width: 45%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        margin-left: auto;
+        text-align: right;
+    }
+
+    /* contents */
+    #hardle iframe {
+        width: 100%;
+    }
+
+    #menu.visible-menu {
+        display: block;
+    }
+
+    #menu.hidden-menu {
+        display: none;
+    }
+}
